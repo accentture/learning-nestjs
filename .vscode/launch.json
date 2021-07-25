@@ -1,0 +1,13 @@
+{
+    "version":"0.2.0",
+    "configurations": [
+        {
+            "type": "node", //it make reference to node.js
+            "request": "launch",
+            "name": "Debug Nest Framework", //name of debugger
+            "runtimeArgs": ["--nolazy", "-r", "ts-node/register"], //args in runtime that we are passing
+            "args": ["${workspaceFolder}/src/main.ts"], //to use main file
+            "autoAttachChildProcesses":true //to use processor of vscode to use the same console
+        }
+    ]
+}
