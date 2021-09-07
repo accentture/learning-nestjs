@@ -11,6 +11,7 @@ import { Client } from './modules/clients-swagger/extra-models/client';
 
 //import { Client } from './modules/clients/models/client.model';
 import { CreateUser2Pipe } from './modules/users2-pipes/pipes/create-user.pipe';
+import { GlobalInterceptor } from './modules/cars-interceptors/interceptors/global.interceptor';
 
 //this file run our application
 //nest.js use express
@@ -36,7 +37,7 @@ async function bootstrap() {
   app.useGlobalPipes(new CreateUser2Pipe()) //we can use global pipes, it apply to every controller and every route handler
 
   //app.useGlobalFilters(new GlobalExceptionFilter()) //using global filter
-
+  //app.useGlobalInterceptors(new   GlobalInterceptor)
 
   const config = new DocumentBuilder() //build the project conforms the API specification
     .setTitle('Cats example')

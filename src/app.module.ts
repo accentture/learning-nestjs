@@ -10,7 +10,7 @@ import { UserModule } from './modules/users/user.module';
 import { CatsModule } from './modules/cats/cats.module';
 import { ClientsModule } from './modules/clients-swagger/clients.module';
 import { Users2pipesModule } from './modules/users2-pipes/users2pipes.module';
-
+import { InterceptorsModule } from './modules/cars-interceptors/interceptors.module';
 
 @Module({
   imports: [
@@ -19,8 +19,9 @@ import { Users2pipesModule } from './modules/users2-pipes/users2pipes.module';
     UserModule,
     CatsModule,
     ClientsModule,
-    Users2pipesModule], //between imports are the dependencies that this module will use
-  controllers: [AppController], //set of controllers for this module and must be instantiated
+    Users2pipesModule,
+    InterceptorsModule], //between imports are the dependencies that this module will use
+  controllers: [AppController,], //set of controllers for this module and must be instantiated
   providers: [AppService], //registering provider for this module, it will alow resolve the depencies of other elements, besides the instances be able to be shared between this module
 })
 export class AppModule {
